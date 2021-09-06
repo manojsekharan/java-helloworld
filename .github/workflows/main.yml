@@ -26,15 +26,7 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-      - name: java version 
-        run: java -version
-      - name: java version 
-        run: mvn --version
-      - name: python version 
-        run: python --version
-      - name: docker version 
-        run: docker -v
-      - name: terraform version
-        run: terraform --version
+      - name: compile javacode
+        run: javac HelloWorld.java
+      - name: run javacode
+        run: java HelloWorld
